@@ -316,6 +316,12 @@ h1 .green {
     background: linear-gradient(to bottom, var(--muted), transparent);
 }
 
+@media (max-width: 560px) {
+    .hero-scroll {
+        display: none;
+    }
+}
+
 /* Floating badge */
 .hero-badge {
     position: absolute;
@@ -621,7 +627,7 @@ section {
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
+    gap: 0.4rem 0.3rem;
 }
 
 .tag {

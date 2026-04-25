@@ -1,14 +1,14 @@
 # Hi, I'm Sahil Jayant
 
-## Java Backend Developer | Spring Boot | PostgreSQL
+## Junior Software Engineer - Full Stack | Learning Java & Modern Web Technologies
 
-I'm a BCA graduate from Beawar, Rajasthan, passionate about building scalable backend systems and RESTful APIs. I specialize in server-side architecture with Java and Spring Boot, while continuously expanding my full-stack development skills.
+I'm a BCA graduate from Beawar, Rajasthan, passionate about building modern full-stack web applications. With experience in React, Node.js, Express, TypeScript, and SQL, I create scalable solutions from frontend to backend. Currently expanding my expertise into Java and Spring Boot to strengthen my backend capabilities while continuing to master modern web technologies.
 
 ## Technical Skills
 
-**Backend:** Java, Spring Boot, RESTful APIs  
-**Database:** PostgreSQL, SQL  
-**Frontend:** HTML, CSS, JavaScript
+**Backend:** Node.js, Express, Java, Spring Boot, RESTful APIs  
+**Database:** PostgreSQL, MySQL, MongoDB, SQL  
+**Frontend:** React, TypeScript, HTML, CSS, JavaScript
 
 ## About This Portfolio Website
 
@@ -29,7 +29,7 @@ The site features smooth animations, scroll reveals, a responsive design that wo
 
 ## What You'll Find Here
 
-Explore my portfolio to see my projects, learn about my background, and get to know my work in backend development.
+Explore my portfolio to see my projects, learn about my background, and get to know my work in full stack development.
 
 ## Let's Connect
 

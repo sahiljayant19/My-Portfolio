@@ -1,6 +1,6 @@
 # Hi, I'm Sahil Jayant
 
-## Junior Software Engineer - Full Stack | Learning Java & Modern Web Technologies
+## Software Engineer - Full Stack | Learning Java & Modern Web Technologies
 
 I'm a BCA graduate from Beawar, Rajasthan, passionate about building modern full-stack web applications. With experience in React, Node.js, Express, TypeScript, and SQL, I create scalable solutions from frontend to backend. Currently expanding my expertise into Java and Spring Boot to strengthen my backend capabilities while continuing to master modern web technologies.
 

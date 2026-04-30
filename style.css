@@ -473,6 +473,31 @@ section {
     align-items: center;
     gap: 1.5rem;
     margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-header::before {
+    content: '┌───────────────────────────────────────────────────';
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 0.7rem;
+    color: var(--terminal-green-dim);
+    position: absolute;
+    top: -1.2rem;
+    left: 0;
+    white-space: nowrap;
+    opacity: 0.5;
+}
+
+.section-header::after {
+    content: '└───────────────────────────────────────────────────';
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 0.7rem;
+    color: var(--terminal-green-dim);
+    position: absolute;
+    bottom: -1.2rem;
+    left: 0;
+    white-space: nowrap;
+    opacity: 0.5;
 }
 
 .section-num {
@@ -497,6 +522,17 @@ section {
     flex: 1;
     height: 2px;
     background: var(--border);
+    position: relative;
+}
+
+.section-line::after {
+    content: '─┘';
+    color: var(--terminal-green-dim);
+    font-size: 0.7rem;
+    position: absolute;
+    right: 0;
+    top: -5px;
+    opacity: 0.5;
 }
 
 /* ============ ABOUT ============ */
@@ -933,6 +969,39 @@ section {
     color: var(--terminal-amber);
 }
 
+.edu-terminal {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.edu-t-line {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 2;
+}
+
+.edu-t-cmd {
+    color: var(--terminal-amber);
+}
+
+.edu-t-out {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: var(--terminal-amber);
+    line-height: 1.8;
+    padding-left: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.edu-t-val {
+    color: var(--terminal-green);
+    font-weight: 700;
+}
+
 /* ============ CERTIFICATES ============ */
 #certificates {
     border-top: 2px solid var(--border);
@@ -1162,7 +1231,7 @@ section {
     50% { transform: scale(1.1); opacity: 0.8; }
 }
 
-/* Scroll Progress Bar */
+/* Scroll Progress Bar - Terminal Status Bar */
 .scroll-progress {
     position: fixed;
     top: 0;
@@ -1171,7 +1240,23 @@ section {
     background: var(--terminal-green);
     z-index: 10001;
     transition: width 0.2s ease;
-    box-shadow: 0 0 10px var(--terminal-green);
+    box-shadow: 0 0 10px var(--terminal-green), 0 0 20px rgba(74, 222, 128, 0.2);
+}
+
+.scroll-progress::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, var(--terminal-green));
+    animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
 }
 
 /* Resume Button */
@@ -1228,26 +1313,41 @@ section {
     box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
 }
 
-/* Skill Progress Bars */
+/* Skill Progress Bars - Terminal Style */
 .skill-progress {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   margin: 0.5rem 0 1rem 0;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.progress-bar-track {
+  flex: 1;
+  height: 8px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
 }
 
 .progress-bar {
-  height: 4px;
+  height: 100%;
   background: var(--terminal-green);
-  border-radius: 0;
+  border-radius: 4px;
   transition: width 1s ease;
+  box-shadow: 0 0 6px rgba(74, 222, 128, 0.3);
 }
 
 .progress-text {
   font-family: 'JetBrains Mono', 'Courier New', monospace;
   font-size: 0.7rem;
   color: var(--terminal-green);
-  min-width: 35px;
+  min-width: 40px;
+  text-align: right;
 }
 
 /* Experience Timeline */
@@ -1355,7 +1455,36 @@ footer {
     position: relative;
     z-index: 1;
     border-top: 2px solid var(--border);
-    padding: 2rem 2rem;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-terminal {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-line {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 2;
+}
+
+.footer-cmd {
+    color: var(--terminal-amber);
+}
+
+.footer-val {
+    color: var(--terminal-green);
+}
+
+.footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;

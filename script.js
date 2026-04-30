@@ -102,3 +102,25 @@ terminalLines.forEach(line => {
   });
   tObs.observe(line);
 });
+
+// Typing effect for section titles
+const sectionTitles = document.querySelectorAll('.section-title');
+sectionTitles.forEach(title => {
+  const originalText = title.textContent;
+  
+  const titleObs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      title.textContent = '';
+      let i = 0;
+      const typingInterval = setInterval(() => {
+        if (i < originalText.length) {
+          title.textContent += originalText[i++];
+        } else {
+          clearInterval(typingInterval);
+        }
+      }, 50);
+      titleObs.unobserve(title);
+    }
+  }, { threshold: 0.5 });
+  titleObs.observe(title);
+});

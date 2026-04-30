@@ -2,7 +2,9 @@
 window.addEventListener('load', () => {
   setTimeout(() => {
     const loadingScreen = document.getElementById('loadingScreen');
-    loadingScreen.classList.add('hidden');
+    if (loadingScreen) {
+      loadingScreen.classList.add('hidden');
+    }
   }, 1500);
 });
 

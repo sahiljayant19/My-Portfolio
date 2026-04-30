@@ -430,7 +430,7 @@ h1 .green {
     font-family: 'JetBrains Mono', 'Courier New', monospace;
     font-size: 0.7rem;
     color: var(--terminal-green);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     width: fit-content;
     animation: fadeUp 0.9s ease both;
 }

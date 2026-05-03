@@ -35,6 +35,11 @@ body {
     cursor: default;
 }
 
+img,
+svg {
+    max-width: 100%;
+}
+
 /* Terminal block cursor */
 .cursor {
     position: fixed;
@@ -198,7 +203,10 @@ nav {
 }
 
 .hero-inner {
+    width: min(100%, 1120px);
     max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
     animation: fadeUp 0.9s ease both;
 }
 
@@ -473,7 +481,10 @@ section {
     align-items: center;
     gap: 1.5rem;
     margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
+    width: min(100%, 1120px);
 }
 
 .section-header::before {
@@ -545,6 +556,9 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: start;
+    width: min(100%, 1120px);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-text p {
@@ -652,6 +666,9 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
+    width: min(100%, 1120px);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .skill-card {
@@ -740,6 +757,9 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 1.5rem;
+    width: min(100%, 1120px);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project-card {
@@ -750,6 +770,7 @@ section {
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
+    min-width: 0;
 }
 
 .project-card:hover {
@@ -924,6 +945,8 @@ section {
     align-items: flex-start;
     gap: 2rem;
     max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
     transition: border-color 0.3s;
 }
 
@@ -1011,7 +1034,9 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    max-width: 100%;
+    width: min(100%, 1120px);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cert-card {
@@ -1105,6 +1130,9 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: start;
+    width: min(100%, 1120px);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-text h2 {
@@ -1577,11 +1605,91 @@ footer {
     }
 
     section {
-        padding: 5rem 1.5rem;
+        padding: 5rem 1rem;
     }
 
     #hero {
-        padding: 0 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .hero-inner {
+        text-align: center;
+    }
+
+    .status {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-tag,
+    .hero-btns {
+        justify-content: center;
+    }
+
+    .hero-tag {
+        flex-wrap: wrap;
+        line-height: 1.7;
+    }
+
+    .hero-title-row {
+        align-items: center;
+    }
+
+    .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+        overflow-wrap: anywhere;
+    }
+
+    h1 {
+        font-size: clamp(1.9rem, 9vw, 2.6rem);
+        overflow-wrap: anywhere;
+    }
+
+    .btn,
+    .btn-resume {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .section-header::before,
+    .section-header::after {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .skill-card,
+    .project-card,
+    .terminal-box,
+    .edu-card,
+    .cert-card,
+    .contact-link {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .project-card,
+    .edu-card,
+    .cert-content,
+    .terminal-body {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .project-visual,
+    .terminal-body,
+    .edu-terminal,
+    .contact-link-info {
+        overflow-wrap: anywhere;
+    }
+
+    .arch-line {
+        flex-wrap: wrap;
     }
 
     .hero-title-row {
@@ -1646,11 +1754,11 @@ footer {
     }
 
     section {
-        padding: 5rem 1.5rem;
+        padding: 5rem 1rem;
     }
 
     #hero {
-        padding: 0 1.5rem;
+        padding: 0 1rem;
     }
 
     .about-grid,

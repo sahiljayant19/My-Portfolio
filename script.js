@@ -71,13 +71,13 @@ const terminalLines = document.querySelectorAll('.t-cmd');
 terminalLines.forEach(line => {
   const originalText = line.textContent;
   let isTyping = false;
-  
+
   function typeText() {
     if (isTyping) return;
     isTyping = true;
     line.textContent = '';
     let i = 0;
-    
+
     const typingInterval = setInterval(() => {
       if (i < originalText.length) {
         line.textContent += originalText[i++];
@@ -89,9 +89,9 @@ terminalLines.forEach(line => {
       }
     }, 60);
   }
-  
+
   const tObs = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting) { 
+    if (entries[0].isIntersecting) {
       // Start infinite loop when visible
       typeText();
       const loopInterval = setInterval(() => {
@@ -107,7 +107,7 @@ terminalLines.forEach(line => {
 const sectionTitles = document.querySelectorAll('.section-title');
 sectionTitles.forEach(title => {
   const originalText = title.textContent;
-  
+
   const titleObs = new IntersectionObserver(entries => {
     if (entries[0].isIntersecting) {
       title.textContent = '';

@@ -585,10 +585,11 @@ section {
 
 .terminal-box {
     background: var(--card);
-    border: 2px solid var(--terminal-green-dim);
+    border: 1px solid rgba(74, 222, 128, 0.4);
     border-radius: 8px;
     overflow: hidden;
     cursor: text;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55), 0 0 20px rgba(74, 222, 128, 0.12);
 }
 
 .terminal-bar {
@@ -597,7 +598,7 @@ section {
     gap: 0.5rem;
     padding: 0.5rem 1rem;
     background: #0d0d0d;
-    border-bottom: 2px solid var(--terminal-green-dim);
+    border-bottom: 1px solid rgba(74, 222, 128, 0.3);
 }
 
 .terminal-dot {
@@ -643,10 +644,12 @@ section {
 .t-prompt {
     color: var(--terminal-green);
     user-select: none;
+    text-shadow: 0 0 5px rgba(74, 222, 128, 0.4);
 }
 
 .t-cmd {
     color: var(--terminal-green);
+    text-shadow: 0 0 5px rgba(74, 222, 128, 0.4);
 }
 
 .t-out {
@@ -656,10 +659,12 @@ section {
 
 .t-out .val {
     color: var(--terminal-amber);
+    text-shadow: 0 0 5px rgba(255, 176, 0, 0.4);
 }
 
 .t-out .str {
     color: var(--terminal-cyan);
+    text-shadow: 0 0 5px rgba(96, 165, 250, 0.4);
 }
 
 /* ============ SKILLS ============ */
@@ -679,19 +684,21 @@ section {
 
 .skill-card {
     background: var(--card);
-    border: 2px solid var(--border);
+    border: 1px solid var(--border);
     border-radius: 8px;
     padding: 1.75rem;
-    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     overflow: hidden;
     text-align: center;
 }
 
 .skill-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--terminal-green);
-    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.15);
+    transform: translateY(-5px);
+    border-color: rgba(74, 222, 128, 0.65);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45), 0 0 15px rgba(74, 222, 128, 0.12);
 }
 
 .skill-card::before {
@@ -770,19 +777,21 @@ section {
 
 .project-card {
     background: var(--card);
-    border: 2px solid var(--border);
+    border: 1px solid var(--border);
     border-radius: 8px;
     padding: 2rem;
     position: relative;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     min-width: 0;
 }
 
 .project-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--terminal-green);
-    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.2);
+    transform: translateY(-5px);
+    border-color: rgba(74, 222, 128, 0.65);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45), 0 0 15px rgba(74, 222, 128, 0.12);
 }
 
 .project-card.featured {
@@ -795,13 +804,13 @@ section {
 
 .project-glow {
     position: absolute;
-    top: -60px;
-    right: -60px;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, rgba(0, 255, 0, 0.08), transparent 70%);
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(74, 222, 128, 0.04) 0%, rgba(96, 165, 250, 0.02) 50%, transparent 80%);
     pointer-events: none;
-    transition: opacity 0.3s;
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     opacity: 0;
 }
 
@@ -855,39 +864,51 @@ section {
 }
 
 .st-java {
-    background: rgba(255, 176, 0, 0.1);
+    background: rgba(255, 176, 0, 0.12);
     color: var(--terminal-amber);
-    border: 1px solid rgba(255, 176, 0, 0.3);
+    border: 1px solid rgba(255, 176, 0, 0.4);
+    box-shadow: 0 0 10px rgba(255, 176, 0, 0.2);
+    text-shadow: 0 0 5px rgba(255, 176, 0, 0.5);
 }
 
 .st-spring {
-    background: rgba(0, 255, 0, 0.1);
+    background: rgba(0, 255, 0, 0.12);
     color: var(--terminal-green);
-    border: 1px solid rgba(0, 255, 0, 0.3);
+    border: 1px solid rgba(0, 255, 0, 0.4);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
 }
 
 .st-web {
-    background: rgba(0, 255, 255, 0.1);
+    background: rgba(0, 255, 255, 0.12);
     color: var(--terminal-cyan);
-    border: 1px solid rgba(0, 255, 255, 0.3);
+    border: 1px solid rgba(0, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
 }
 
 .st-db {
-    background: rgba(168, 85, 247, 0.1);
+    background: rgba(168, 85, 247, 0.12);
     color: #c084fc;
-    border: 1px solid rgba(168, 85, 247, 0.3);
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
+    text-shadow: 0 0 5px rgba(192, 132, 252, 0.5);
 }
 
 .st-nextjs {
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(139, 92, 246, 0.15);
+    color: #a78bfa;
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+    text-shadow: 0 0 5px rgba(167, 139, 250, 0.5);
 }
 
 .st-storage {
-    background: rgba(250, 204, 21, 0.1);
+    background: rgba(250, 204, 21, 0.12);
     color: #fde047;
-    border: 1px solid rgba(250, 204, 21, 0.3);
+    border: 1px solid rgba(250, 204, 21, 0.4);
+    box-shadow: 0 0 10px rgba(250, 204, 21, 0.2);
+    text-shadow: 0 0 5px rgba(253, 224, 71, 0.5);
 }
 
 .project-links {
@@ -911,7 +932,7 @@ section {
 
 .project-visual {
     background: #0d0d0d;
-    border: 2px solid var(--border);
+    border: 1px solid var(--border);
     border-radius: 8px;
     padding: 1.5rem;
     font-family: 'JetBrains Mono', 'Courier New', monospace;
@@ -944,7 +965,7 @@ section {
 
 .edu-card {
     background: var(--card);
-    border: 2px solid var(--border);
+    border: 1px solid var(--border);
     border-radius: 8px;
     padding: 2rem 2.5rem;
     display: flex;
@@ -953,13 +974,15 @@ section {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    transition: border-color 0.3s;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .edu-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--terminal-green);
-    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.15);
+    transform: translateY(-5px);
+    border-color: rgba(74, 222, 128, 0.65);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45), 0 0 15px rgba(74, 222, 128, 0.12);
 }
 
 .edu-icon {
@@ -1047,18 +1070,20 @@ section {
 
 .cert-card {
     background: var(--card);
-    border: 2px solid var(--border);
+    border: 1px solid var(--border);
     border-radius: 8px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     display: flex;
     min-height: 220px;
 }
 
 .cert-card:hover {
-    border-color: var(--terminal-green-dim);
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(74, 222, 128, 0.15);
+    transform: translateY(-5px);
+    border-color: rgba(74, 222, 128, 0.65);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45), 0 0 15px rgba(74, 222, 128, 0.12);
 }
 
 .cert-content {
@@ -1873,4 +1898,44 @@ footer {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--terminal-amber);
+}
+
+.st-ts {
+    background: rgba(49, 120, 198, 0.12);
+    color: #60a5fa;
+    border: 1px solid rgba(49, 120, 198, 0.4);
+    box-shadow: 0 0 10px rgba(49, 120, 198, 0.2);
+    text-shadow: 0 0 5px rgba(96, 165, 250, 0.5);
+}
+
+.st-motion {
+    background: rgba(236, 72, 153, 0.15);
+    color: #f472b6;
+    border: 1px solid rgba(236, 72, 153, 0.4);
+    box-shadow: 0 0 10px rgba(236, 72, 153, 0.2);
+    text-shadow: 0 0 5px rgba(244, 114, 182, 0.5);
+}
+
+.st-tailwind {
+    background: rgba(56, 178, 172, 0.15);
+    color: #2dd4bf;
+    border: 1px solid rgba(56, 178, 172, 0.4);
+    box-shadow: 0 0 10px rgba(56, 178, 172, 0.2);
+    text-shadow: 0 0 5px rgba(45, 212, 191, 0.5);
+}
+
+.st-react {
+    background: rgba(97, 218, 251, 0.12);
+    color: #61dafb;
+    border: 1px solid rgba(97, 218, 251, 0.4);
+    box-shadow: 0 0 10px rgba(97, 218, 251, 0.2);
+    text-shadow: 0 0 5px rgba(97, 218, 251, 0.5);
+}
+
+.st-events {
+    background: rgba(245, 158, 11, 0.12);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+    text-shadow: 0 0 5px rgba(251, 191, 36, 0.5);
 }

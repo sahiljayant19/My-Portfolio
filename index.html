@@ -111,7 +111,7 @@
       <div class="about-text reveal">
         <p>
           I'm <strong>Sahil Jayant</strong>, a BCA graduate passionate about building modern
-          full-stack web applications. With experience in <span class="accent-word">React, Node.js, Express,
+          full-stack web applications. With experience in <span class="accent-word">React, Node.js, Express, MongoDB,
             TypeScript,</span>
           and SQL, I create scalable solutions from frontend to backend. Currently diving deeper
           into advanced Node.js architectures to strengthen my backend capabilities while continuing to master
@@ -119,7 +119,7 @@
         </p>
         <p>
           I built <strong>Eventify</strong>, a full-stack event booking platform using
-          Node.js, Express.js, SQL, and Prisma — my most complete project to date.
+          Node.js, Express.js, SQL, and Mysql2 driver — my most complete project to date.
           I'm always pushing past tutorials and into real engineering.
         </p>
         <p>
@@ -396,17 +396,24 @@
           </div>
         </div>
         <div class="project-visual">
-          <div style="margin-bottom:1rem;color:var(--accent);font-size:1rem;letter-spacing:0.1em;">ARCHITECTURE</div>
+          <div style="margin-bottom:1rem;color:var(--accent);font-size:1rem;letter-spacing:0.1em;font-weight:bold;">
+            ARCHITECTURE</div>
+
+          <!-- Frontend Layer -->
           <div class="arch-line">
             <span class="arch-node"
               style="border-color:#06b6d4;color:#67e8f9;background:rgba(6,182,212,0.1)">Browser</span>
             <span class="arch-arrow" style="color:#06b6d4">──→</span>
-            <span class="arch-node"
-              style="border-color:#06b6d4;color:#67e8f9;background:rgba(6,182,212,0.1)">HTML/CSS/JS</span>
+            <span class="arch-node" style="border-color:#06b6d4;color:#67e8f9;background:rgba(6,182,212,0.1)">HTML / CSS
+              / JS</span>
           </div>
+
+          <!-- Network Layer -->
           <div class="arch-line" style="padding-left:3.5rem">
             <span class="arch-arrow" style="color:#06b6d4">↓ Fetch API</span>
           </div>
+
+          <!-- Backend Layer -->
           <div class="arch-line">
             <span class="arch-node" style="border-color:#8b5cf6;color:#c084fc;background:rgba(139,92,246,0.1)">Node.js /
               Express</span>
@@ -414,27 +421,35 @@
             <span class="arch-node" style="border-color:#8b5cf6;color:#c084fc;background:rgba(139,92,246,0.1)">REST
               API</span>
           </div>
+
+          <!-- Database Driver Layer -->
           <div class="arch-line" style="padding-left:3.5rem">
-            <span class="arch-arrow" style="color:#8b5cf6">↓ Prisma ORM</span>
+            <span class="arch-arrow" style="color:#8b5cf6">↓ mysql2 Driver</span>
           </div>
+
+          <!-- Database Layer -->
           <div class="arch-line">
             <span class="arch-node"
               style="border-color:#f59e0b;color:#fcd34d;background:rgba(245,158,11,0.1)">MySQL</span>
             <span class="arch-arrow" style="color:#f59e0b">──→</span>
-            <span style="color:var(--muted);font-size: 0.8rem">Events, Users, Bookings</span>
+            <span style="color:var(--muted);font-size: 0.85rem;font-weight:500;">Events, Users, Bookings</span>
           </div>
+
+          <!-- Key Features Section -->
           <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);">
-            <div style="color:var(--muted);font-size:1rem;margin-bottom:0.5rem;">KEY FEATURES</div>
+            <div style="color:var(--muted);font-size:1rem;margin-bottom:0.5rem;font-weight:bold;letter-spacing:0.05em;">
+              KEY FEATURES</div>
             <div style="color:var(--muted);font-size:1rem;line-height:2">
               ✓ Full-stack event booking platform<br>
               ✓ Secure user authentication with JWT<br>
               ✓ Ticket booking & booking management system<br>
-              ✓ RESTful API with MySQL database integration<br>
+              ✓ RESTful API with native MySQL database pooling<br>
               ✓ Cloud deployment using Vercel, Render & Aiven<br>
               ✓ Responsive modern frontend experience<br>
             </div>
           </div>
         </div>
+
       </div>
 
       <!-- SECOND BRAIN PRO -->
